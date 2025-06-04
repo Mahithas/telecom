@@ -18,3 +18,17 @@
 * An established websocket connetion is needed for real time updates for the Dashboard component.
 
 * Accessibility and Globalization: Using Semantic HTML and following WACAG guidelines helps with building accessible UI components that is user friendly. And Localization using I18n can be implanted for loading the UI  globally.
+
+** WorkFlow**
+
+* A Real Estate developer adds new towers and carriers information.
+* Then a POST/tower API call is made to save this info in the backend.
+* The UI then uses a GET/tower API to retrieve and display the list of towers and their carriers information.
+* A device tries to connect to a nearby tower.
+* This triggers a backend call that sends device info and updates the database with the new device record.
+* The system detects app usage by a device/user
+* Tower captures app usage and checks GET/policies based on user roles.
+* If its accepted, the dashboard is updated with realtime data to the UI (this can be achieved by establishing a Websocket connection)
+* If its denied, it ends in a failure node
+
+* 
